@@ -26,7 +26,7 @@ const Button = ({
     setStyleButton(stylePressed);
     setTextStyle(styleTextPressed);
 
-    if (typeof onPress === 'function') {
+    if (typeof onLongPress === 'function') {
       onLongPress();
     }
   }
