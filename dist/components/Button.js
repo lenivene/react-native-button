@@ -3,6 +3,7 @@ import {TouchableWithoutFeedback, View, Text} from 'react-native';
 
 const Button = ({
   children,
+  elementChild: Boolean,
   onPress,
   onLongPress,
   style,
@@ -40,7 +41,7 @@ const Button = ({
         setTextStyle(styleText);
       }}>
       <View style={styleButton}>
-        <Text style={styleButtonText}>{children}</Text>
+        { ! elementChild ? <Text style={styleButtonText}>{children}</Text> : children }
       </View>
     </TouchableWithoutFeedback>
   );
